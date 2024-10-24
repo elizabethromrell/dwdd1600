@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Where Fitness Meets Brilliance">
+    <meta name="author" content="Elizabeth Romrell">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GymGenius: Home</title>
+    <link rel="stylesheet" href="gym.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Start the page header -->
+    <header>
+    <h1>GymGenius</h1>
+    <p>Where Fitness Meets Brilliance</p>
+    </header>
+    
+     <!-- Start the page navigation -->
+    <nav>
+    <ul>
+        <li ><a href="index.html">The History of Weightlifting</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="nutrition.html">Nutrition</a></li>
+        <li class="active"><a href="classes.html">Classes</a></li>
+        <li><a href="Plans.html">Plans</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Start the main page -->
+    <main>
+        <h1>Fitness Classes</h1> 
+        <form method="get" class="myForm" action="thanks.html">
+        
+        <fieldset>
+        <legend>Customer Information</legend>  
+        <label>First Name*<input type="text" name="fname"  required></label>
+        <label>Last Name*<input type="text" name="lname"  required></label>   
+        <label>Phone Number*<input type="tel" name="phone" required placeholder="987-555-1234"></label> 
+        <label>Email*<input type="text" name="email" required></label> 
+       </fieldset>
+            
+       <fieldset>
+       <legend>Month-To-Month Plans</legend>     
+          <label><input type="radio" name="method" value="studio"> Studio
+           </label>
+           <label><input type="radio" name="method" value="fitness"> Fitness
+           </label>
+           <label><input type="radio" name="method" value="basic"> Basic</label>
+        </fieldset>
+            
+        <fieldset>
+        <legend>Available Add Ons</legend> 
+           <label><input type="checkbox" name="training" value="chosen"> Personal Training</label>
+            <label><input type="checkbox" name="services" value="chosen"> Childcare Services</label>
+            <label><input type="checkbox" name="counseling" value="chosen"> Nutrition Counseling</label> 
+            <label><input type="checkbox" name="rentals" value="chosen"> Locker Rentals</label> 
+        </fieldset>
+            
+        <fieldset>
+            <legend>Training Consultation</legend> 
+             <label>Select a date and time
+            <label><input type="checkbox" name="monday" value="chosen"> Monday</label>
+            <label><input type="checkbox" name="tuesday" value="chosen"> Tuesday</label>
+            <label><input type="checkbox" name="wednesday" value="chosen"> Wednesday</label> 
+            <label><input type="checkbox" name="thursday" value="chosen"> Thursday</label>
+            <label><input type="checkbox" name="friday" value="chosen"> Friday</label> 
+            <label><input type="checkbox" name="saturday" value="chosen"> Saturday</label> 
+            <label><input type="checkbox" name="sunday" value="chosen"> Sunday</label> 
+            <select name="time">
+            <option value="none">Please Select</option>
+            <option value="twelve">12:00pm-1:00pm</option>
+            <option value="one">1:00pm-2:00pm</option>
+            <option value="two">2:00pm-3:00pm</option>
+            <option value="three">3:00pm-4:00pm</option>
+            <option value="four">4:00pm-5:00pm</option>
+            <option value="five">5:00pm-6:00pm</option>
+            </select>
+            </label>
+        </fieldset>
+            
+        <label>Comments
+            <textarea name="comments"></textarea>
+            </label>
+         
+        
+        <input type="submit" value="Send Sign up Request">
+        </form>
+    </main>
+    
+    <!-- Start of the page footer -->
+    <footer>
+    <p>&copy; 2024 &bull; Elizabeth Romrell &bull; <a href="mailto:zen@gmail.com">Email Us</a></p>
+    </footer>
+    
+</body>
+</html>
