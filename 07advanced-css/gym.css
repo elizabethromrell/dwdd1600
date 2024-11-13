@@ -188,9 +188,11 @@ div.gallery img {
     width: 98%;
     height: auto   
 }
-div.gallery img: hover{
+
+div.gallery img:hover {
    box-shadow: 0px 0px 10px rgba(0,0,0,0.9);
 }
+
 .myForm fieldset {
     border: 1px solid #024873;
     border-radius: 3px;
