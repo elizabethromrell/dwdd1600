@@ -168,33 +168,29 @@ figure.wrapped img {
     width: 100%;
     height: auto;  
 }
-
-figure.wrapped img: hover {
-box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-}
-    
-    
-    
 figure.wrapped figcaption {
     text-align: center;
     font-size: .75rem;
 }
-
 div.gallery {
     display: flex;
     flex-wrap: wrap;
 }
-
 div.gallery figure {
     margin: .5rem 2% 0 0;
 }
-
 div.gallery figcaptopm {
     text-align: center;
     font-size: .8rem;
     color: #024873
 }
-
+div.gallery img {
+    width: 98%;
+    height: auto   
+}
+div.gallery img: hover{
+   box-shadow: 0px 0px 10px rgba(0,0,0,0.9);
+}
 .myForm fieldset {
     border: 1px solid #024873;
     border-radius: 3px;
