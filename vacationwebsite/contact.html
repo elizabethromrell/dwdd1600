@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradise Pathways - Home</title>
+  <link rel="stylesheet" href="paradise.css">
+  <script>
+    // Function to handle form submission, save data in localStorage, and redirect to thank-you page
+    function handleFormSubmit(event) {
+      event.preventDefault();  // Prevent the form from submitting traditionally
+
+      // Get values from the form
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const destination = document.getElementById('destination').value;
+      const travel = document.querySelector('input[name="travel"]:checked').value;
+      const message = document.getElementById('message').value;
+
+      // Save form data in localStorage
+      localStorage.setItem('name', name);
+      localStorage.setItem('email', email);
+      localStorage.setItem('destination', destination);
+      localStorage.setItem('travel', travel);
+      localStorage.setItem('message', message);
+
+      // Redirect to the thank-you page
+      window.location.href = 'thank-you.html';
+    }
+  </script>
+</head>
+<body>
+    <!-- Header Section with Hero Image -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Paradise Pathways</h1>
+        <p class="tagline">Where Every Journey Leads to Paradise</p>
+      </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+      <section>
+        <h2>Contact Us</h2>
+        <form onsubmit="handleFormSubmit(event)">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="destination">Preferred Destination</label>
+            <select id="destination" name="destination" required>
+              <option value="bali">Bali</option>
+              <option value="paris">Paris</option>
+              <option value="maldives">Maldives</option>
+            </select>
+
+            <label>Travel Preferences</label>
+            <input type="radio" id="honeymoon" name="travel" value="honeymoon">
+            <label for="honeymoon">Honeymoon</label>
+            <input type="radio" id="family" name="travel" value="family">
+            <label for="family">Family</label>
+            <input type="radio" id="solo" name="travel" value="solo">
+            <label for="solo">Solo</label>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Paradise Pathways. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

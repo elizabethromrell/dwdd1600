@@ -1,0 +1,516 @@
+/* Importing the fonts: Poppins for body text and Dancing Script for headings */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Overall Design */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFF8DC; /* Light sand color for background */
+  color: #333;
+  font-size: 15px; /* Slightly smaller font size for body */
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-weight: 400;
+}
+
+/* Container for main content */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px; /* Slightly reduced padding */
+}
+
+/* Header (Made slightly smaller, now touching the edge) */
+header {
+  background-color: #1E90FF; /* Tropical blue background */
+  color: white;
+  text-align: center;
+  padding: 80px 50px; /* Reduced padding */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-bottom: 4px solid #FFD700;
+  width: 100%;
+  margin: 0; /* Ensures the header touches the edges */
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5em; /* Reduced the header font size from 6em to 5em */
+  font-weight: normal;
+  color: white;
+  margin: 0;
+}
+
+.tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2em; /* Reduced tagline font */
+  color: #FFD700;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* Hero Section Styling */
+header.hero {
+  background-image: url('images/paradise.jpg'); /* Replace with your own image path */
+  background-size: cover; /* Make the image cover the whole section */
+  background-position: center; /* Center the image */
+  width: 100%; /* Full width */
+  height: 50vh; /* Full viewport height */
+  color: white;
+  text-align: center;
+  padding: 80px 20px; /* Adjusted padding for spacing */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Optional shadow for depth */
+  border-bottom: 4px solid #FFD700; /* Optional bottom border for effect */
+  position: relative; /* Allows text overlay on top */
+}
+
+/* Hero Text Styling */
+.hero .hero-content {
+  position: absolute; /* Position text on top of the image */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center text */
+  width: 100%; /* Full width */
+  z-index: 2; /* Ensure text is above the image */
+}
+
+.hero h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5em; /* Large text */
+  font-weight: normal;
+  color: white;
+  margin: 0;
+}
+
+.hero .tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2em; /* Tagline font size */
+  color: #FFD700;
+  margin-top: 15px;
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase tagline */
+}
+/* Navigation Bar Styles */
+nav {
+  background: linear-gradient(to right, #FF7F50, #FF6347, #FFD700);
+  padding: 16px 0; /* Adjusted padding */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4em; /* Slightly larger font size for links */
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #FFD700;
+  color: #1E90FF;
+  transform: scale(1.05);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.4em;
+    padding: 12px 25px;
+    width: 100%;
+    text-align: center;
+  }
+    
+}
+/* Style for the testimonial audio player */
+.testimonial-audio {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonial-audio audio {
+  width: 100%; /* Make the audio player responsive */
+  max-width: 500px; /* Limit the width to 500px */
+  border-radius: 10px;
+}
+
+/* Main Content */
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.0em; /* Smaller font size for section headers */
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 30px; /* Increased margin for spacing */
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3em; /* Reduced font size */
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 30px;
+  padding-left: 20px;  /* Added left padding to paragraphs */
+  padding-right: 20px; /* Added right padding to paragraphs */
+}
+
+a {
+  text-decoration: none;
+  color: #FF6347;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #FFD700;
+}
+
+/* Buttons */
+button, input[type="submit"] {
+  background-color: #FF6347;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 35px; /* Reduced padding */
+  font-size: 1.4em; /* Slightly smaller font size */
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #FFD700;
+  color: #1E90FF;
+  transform: scale(1.05);
+}
+
+/* Package Section Styling */
+.package {
+  background-color: white; /* White background */
+  padding: 20px; /* Padding around each package */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  margin-bottom: 40px; /* Space between each package */
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.package h3 {
+  font-size: 2em; /* Larger title */
+  color: #1E90FF; /* Blue color for titles */
+  margin-bottom: 20px;
+}
+
+.package img {
+  width: 100%; /* Make the image responsive */
+  border-radius: 15px; /* Rounded corners for images */
+  margin-bottom: 20px; /* Space between image and text */
+}
+
+.package p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.package a {
+  font-weight: bold;
+  color: #FF6347; /* Use the same accent color */
+}
+
+.package a:hover {
+  color: #FFD700; /* Gold color on hover */
+}
+
+/* Footer */
+footer {
+  background-color: #1E90FF;
+  color: white;
+  padding: 25px; /* Adjusted padding */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0; /* Ensures the footer touches the edges */
+}
+
+footer p {
+  font-size: 1.3em;
+  margin: 0;
+}
+
+/* Contact Form */
+form {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px; /* Adjusted padding */
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.3em; /* Slightly smaller font size */
+  margin-bottom: 25px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+form input[type="submit"] {
+  background-color: #FF6347;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  border: none;
+}
+
+form input[type="submit"]:hover {
+  background-color: #FFD700;
+  color: #1E90FF;
+}
+
+/* About Paradise Pathways Section */
+.about {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3em; /* Reduced font size */
+  line-height: 1.8;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  color: #333;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  background-color: #FFF8DC;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding-left: 20px; /* Added padding to the left */
+  padding-right: 20px; /* Added padding to the right */
+}
+
+.home-image {
+  width: 100%; /* Ensures the image takes up the full width of its container */
+  height: auto; /* Maintains the aspect ratio of the image */
+  max-height: 400px; /* Limit the height to prevent it from becoming too tall */
+  object-fit: cover; /* Ensures the image covers the space without distorting */
+  margin-top: 20px; /* Optional: Adds some space above the image */
+}
+
+
+/* Thank You Page */
+.thank-you {
+  text-align: center;
+  font-size: 2.3em; /* Slightly smaller font size */
+  color: #333;
+  margin-top: 50px;
+}
+
+/* Destination Gallery */
+.destination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.destination figure {
+  width: 30%;
+  min-width: 300px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.destination img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.destination p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 10px;
+  padding: 0 15px;
+}
+
+.destination figure {
+  padding-bottom: 20px; /* Add space between image and description */
+}
+
+.destination figcaption {
+  padding: 15px;
+  text-align: center;
+  font-size: 1.3em;
+  color: #1E90FF;
+}
+
+.destination figure:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* General Form Styles */
+form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Fieldset */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Form Labels */
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+/* Form Inputs */
+input[type="text"], input[type="email"], input[type="radio"], input[type="submit"], select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Textarea Styles */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Button Styles */
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: auto;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Radio Buttons Layout */
+input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+/* Flexbox for Label/Input Alignment */
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+fieldset div label {
+  flex: 1;
+  padding-right: 10px;
+}
+
+fieldset div input[type="text"],
+fieldset div input[type="email"],
+fieldset div select,
+fieldset div textarea {
+  flex: 3;
+  margin-bottom: 15px;
+}
+
+/* Form submission button alignment */
+button {
+  width: auto;
+  margin-top: 10px;
+  align-self: center; /* Centers the submit button */
+}
+
+/* Section image */
+.home-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+
